@@ -5,10 +5,13 @@ by Drausin Wulsin (daedalus2718 AT gmail.com)
 
 (disclaimer: I am not a crypto expert, just a guy who likes this stuff and has read up a bit on it.)
 
+---
 
 #### What is E2E encryption?
 - a variant of SP used by all standard E2E encrypted messangers
 - why is it important?
+
+---
 
 #### How do lesser encryption paradigms fall short?
 - symmetric key exchange: how to share key?
@@ -17,16 +20,22 @@ by Drausin Wulsin (daedalus2718 AT gmail.com)
 - ephemeral key exchange: same key used only for short-duration session
     - forward secrecy: secrets broken in the future don't unlock past contents
 
+---
+
 #### Terminology
 - elliptic curve (EC) keys: assymetric key pair, much stronger than RSA
 - elliptic curve Diffie-Hellman (ECDH/DH): how two pairs of EC keys generate a shared secret key
 - key derivation function (KDF): can "stretch" or "shrink" high-entropy bytes to yield symmetric key(s)
+
+---
 
 #### What is the "Signal Protocol"?
 1) initial session setup via [X3DH](https://whispersystems.org/docs/specifications/x3dh/)
 2) iterative message key generation via the [double ratchet](https://whispersystems.org/docs/specifications/doubleratchet/)
 
 Also, session management across devices via [Sesame](https://whispersystems.org/docs/specifications/sesame/)
+
+---
 
 #### Session setup
 - goal is for Alice & Bob to share 32-byte secret, used for subsequent message encryption
@@ -41,6 +50,8 @@ Also, session management across devices via [Sesame](https://whispersystems.org/
     - `DH4 = DH(EK_a, OPK_b)`
     - shared key: `SK = KDF(DH1 || DH2 || DH3 || DH3)`
 
+---
+
 #### Double ratchet
 - goal is for both Alice & Bob to generate same unique encryption key for each message
     - e.g., key(s) for AES256 cipher in GCM mode
@@ -54,6 +65,8 @@ Also, session management across devices via [Sesame](https://whispersystems.org/
     - new root & chain keys generated from `KDF(SK)`
 - "DH" rachet means that `SK` changes with each round trip communication
     - temporary breaches in `SK` don't compromise all future communications
+
+---
 
 #### Resources
 (Read these and you'll actually learn how the SP works.)
