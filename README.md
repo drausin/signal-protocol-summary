@@ -3,7 +3,10 @@ A very brief overview of the Signal Protocol.
 
 by Drausin Wulsin (daedalus2718 AT gmail.com)
 
-(disclaimer: I am not a crypto expert, just a guy who likes this stuff and has read up a bit on it.)
+
+
+
+(disclaimer: I am not a crypto expert, just a guy who has read up a bit on this stuff.)
 
 ---
 
@@ -30,8 +33,8 @@ by Drausin Wulsin (daedalus2718 AT gmail.com)
 ---
 
 #### What is the "Signal Protocol"?
-1) initial session setup via [X3DH](https://whispersystems.org/docs/specifications/x3dh/)
-2) iterative message key generation via the [double ratchet](https://whispersystems.org/docs/specifications/doubleratchet/)
+- initial session setup via [X3DH](https://whispersystems.org/docs/specifications/x3dh/)
+- iterative message key generation via the [double ratchet](https://whispersystems.org/docs/specifications/doubleratchet/)
 
 Also, session management across devices via [Sesame](https://whispersystems.org/docs/specifications/sesame/)
 
