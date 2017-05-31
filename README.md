@@ -8,10 +8,14 @@ A very brief overview of the Signal Protocol.
 - why is it important?
 
 #### How do lesser encryption paradigms fall short?
-- symmetric key exchange: how to share key?
-- asymmetric key exchange: (why PGP better?)
-- pretty good privacy (PGP): if single key is broken, entire chat history decryptable
-- ephemeral key exchange: same key used only for short-duration session
+- symmetric key exchange
+    - how to share key?
+- asymmetric key exchange
+    - slow, fixed keys
+- pretty good privacy (PGP)
+    - if single key is broken, entire chat history decryptable
+- ephemeral key exchange
+    - same key used only for short-duration session
     - forward secrecy: secrets broken in the future don't unlock past contents
 
 ### Terminology
